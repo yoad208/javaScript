@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="index.js"></script>-->
+</head>
+<body>
+<button onclick="get_1()">https://movie-quote-api</button>
+<button onclick="get_2()">ghttps://swapi.dev</button>
+<button onclick="get_3()">https://www.scorebat</button>
+<button onclick="get_4()">season=2021&sort=asc</button>
+<button onclick="get_5()">https://api-football</button>
+
+<script>
+    async function get_1() {
+        await fetch('https://movie-quote-api.herokuapp.com/v1/quote')
+            .then(data => {
+                return data.json();
+            })
+            .then(update => {
+                console.log(update);
+            });
+    }
+    async function get_2() {
+        await fetch('https://swapi.dev/api/people/1')
+            .then(data => {
+                return data.json();
+            })
+            .then(update => {
+                console.log(update);
+            });
+    }
+    async function get_3() {
+        await fetch('https://www.scorebat.com/video-api/v3')
+            .then(data => {
+                return data.json();
+            })
+            .then(update => {
+                console.log(update);
+            });
+    }
+    async function get_4() {
+        await fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?season=2021&sort=asc')
+            .then(data => {
+                return data.json();
+            })
+            .then(update => {
+                console.log(update);
+            });
+    }
+    async function get_5() {
+        await fetch('https://movie-quote-api.herokuapp.com/v1/quote')
+            .then(data => {
+                return data.json();
+            })
+            .then(update => {
+                console.log(update);
+            });
+    }
+</script>
+</body>
+</html>
